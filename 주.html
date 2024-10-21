@@ -49,6 +49,10 @@
             const random = Math.random();
             let cumulativeProbability = 0;
 
+	document.body.addEventListener('click', function() {
+            var audio = document.getElementById('background-music');
+            audio.play();
+        });
 
             for (let i = 0; i < sounds.length; i++) {
                 cumulativeProbability += sounds[i].probability;
