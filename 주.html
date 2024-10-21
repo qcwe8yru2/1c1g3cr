@@ -49,11 +49,11 @@
             const random = Math.random();
             let cumulativeProbability = 0;
 
-	document.body.addEventListener('click', function() {
-            var audio = document.getElementById('background-music');
-            audio.play();
-        });
-
+	var audio = document.getElementById('background-music');
+            audio.pause();
+setTimeout(function(){audio.play();},10000)
+     
+		
             for (let i = 0; i < sounds.length; i++) {
                 cumulativeProbability += sounds[i].probability;
                 if (random < cumulativeProbability) {
